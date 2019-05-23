@@ -1,0 +1,119 @@
+<!doctype html>
+<html class="no-js" lang="en" xmlns:th="https://thymeleaf.org">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Employee Management System</title>
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<!-- CSS Code -->
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/responsive.css">
+</head>
+	<body>
+		<div class="layout-wrapper inner-wrapper">
+			<div class="container">
+				<a href="https://hemrajinfocom.com/"><img src="images/logo.png" alt="Logo" class="logo"></a>
+				<div class="details-holder">
+					<h3>Employee Menu</h3>
+					<ul>
+						<li class="active"><a href="attendanceRegister">Daily Register</a></li>
+						<li><a href="attendances">Attendance history</a></li>
+						<li><a href="leave-application.html">Leave application</a></li>
+						<li><a href="contact-admin.html">Contact admin</a></li>
+						<li><a href="profile">My profile</a></li>
+						<li><a href="logout">Logout</a></li>
+					</ul>
+					<h3 class="mrgn-tp30">Attendance Register</h3>
+					<button class="sbmt-btn"><a href="breakstart">Take Break</a></button>
+					<button class="sbmt-btn"><a href="breakend">End Break</a></button>
+					<div class="table-details table-responsive">
+						<table class="table">
+							<thead>
+								<tr>
+									<td>Break Start</td>
+									<td>Break End</td>
+									<td>Break Time</td>
+								</tr>
+							</thead>
+							<tbody>
+							<tr th:each="break : ${breaks}">
+								<td th:text="${break.breakStart}"></td>
+								<td th:text="${break.breakEnd}"></td>
+								<td th:text="${break.breakTime}"></td>
+							</tr>
+							</tbody>
+						</table>
+					</div>
+					<!--
+					<div class="employee-details">
+						<h4>Welcom Saroni Mukherjee!</h4>
+						<p>Current Time: 28th February 2019 10:41:07 AM (GMT)</p>
+						<p>Local Time: 28th February 2019 04:11:07 PM (GMT + 5.5 hrs)</p>
+						&nbsp;
+						<p class="working-hours"><b>Your Working Hours: 10:00 AM - 07:00 PM</b></p>
+						<p>Grace period for leaving the office before office hours is : 00:30 Hrs</p>
+
+						<button class="sbmt-btn"><a href="breakstart">Take Break</a></button>
+						<button class="sbmt-btn"><a href="breakend">End Break</a></button>
+
+						<p><b>Please specify the reason for taking a break. Select option from pop down list.</b></p>
+						<form>
+							<div class="row">
+								<div class="col-sm-12">
+									<span>Select your option:</span>
+										<select>
+											<option value=""></option>
+											<option value="">Tea Break</option>
+											<option value="">Lunch Break</option>
+											<option value="">Bank Work</option>
+											<option value="">Smoking Break</option>
+										</select>
+										<button class="sbmt-btn">Take A Break</button>
+								</div>
+							</div>
+						</form>
+						&nbsp;
+						<p><b>Please specify the reason for ceasing early / late. Select option from pop down list or write appropriate reason in the box given below.</b>
+						<form>
+							<div class="row">
+								<div class="col-sm-12">
+									<span>Select your option:</span>
+										<select>
+											<option value=""></option>
+											<option value="">Work Complete</option>
+											<option value="">Client Meeting</option>
+										</select>
+								</div>
+								<div class="col-sm-12">
+									<span>OR Write into</span>
+									<textarea placeholder="Write your reason..."></textarea>
+								</div>
+								<button class="sbmt-btn">Cease</button>
+							</div>
+						</form>
+						-->
+					</div>
+				</div>
+			</div>
+		</div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script type="text/javascript">
+  	$(document).ready(function(){
+   setInterval(function(){ 
+   // toggle the class every five second
+   $('.female').toggleClass('show');  
+   setTimeout(function(){
+     // toggle back after 1 second
+     $('.female').toggleClass('hide');  
+   },1000)
+
+},1000);
+	});
+</script>
+	</body>
+</html>

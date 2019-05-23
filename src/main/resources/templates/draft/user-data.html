@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:th="https://thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<table>
+		<tr>
+			<td>First Name : </td>
+			<td><h4 th:text="${employee.firstname}"></h4></td>
+		</tr>
+		<tr>
+			<td>Last Name : </td>
+			<td><h4 th:text="${employee.lastname}"></h4></td>
+		</tr>
+		<tr>
+			<td>Date of Birth : </td>
+			<td><h4 th:text="${employee.dateofbirth}"></h4></td>
+		</tr>
+		<tr>
+			<td>Address : </td>
+			<td><h4 th:text="${employee.address}"></h4></td>
+		</tr>
+		<tr>
+			<td>Phone No : </td>
+			<td><h4 th:text="${employee.phoneno}"></h4></td>
+		</tr>
+		<tr>
+			<td>Email Id : </td>
+			<td><h4 th:text="${employee.emailid}"></h4></td>
+		</tr>
+		<tr>
+			<td>Password : </td>
+			<td><h4 th:text="${employee.password}"></h4></td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td><h2>Registration Successful</h2></td>
+		</tr>
+	</table>
+</body>
+</html>

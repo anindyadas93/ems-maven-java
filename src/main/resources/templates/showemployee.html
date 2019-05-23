@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<table cellspacing="10" cellpadding="10">
+		<tr>
+			<td>Id</td>
+			<td>First Name</td>
+			<td>Last Name</td>
+			<td>Date of Birth</td>
+			<td>address</td>
+			<td>Phone No</td>
+			<td>Email Id</td>
+			<td>User Name</td>
+			<td>password</td>
+			<!-- 
+			<td>&nbsp;</td>
+			 -->
+		</tr>
+		<tr th:each="employee : ${employees}">
+			<td th:text="${employee.id}"></td>
+			<td th:text="${employee.firstname}"></td>
+			<td th:text="${employee.lastname}"></td>
+			<td th:text="${employee.dateofbirth}"></td>
+			<td th:text="${employee.address}"></td>
+			<td th:text="${employee.phoneno}"></td>
+			<td th:text="${employee.emailid}"></td>
+			<td th:text="${employee.username}"></td>
+			<td th:text="${employee.password}"></td>
+			<!-- 
+			<td><a href="/delete">Delete</a></td>
+			 -->
+		</tr>
+	</table>
+</body>
+</html>

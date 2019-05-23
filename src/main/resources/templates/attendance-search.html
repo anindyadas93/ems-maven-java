@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Attendance Search</title>
+</head>
+<body>
+    Employee Id: <h4 th:text="${employeeId}"></h4>
+    <table>
+        <table cellpadding="5" cellspacing="5">
+            <tr>
+                <td>Working Date</td>
+                <td>In Time</td>
+                <td>Break Total Time</td>
+                <td>Out Time</td>
+                <td>Total Time</td>
+                <td>Working Time</td>
+            </tr>
+            <tr th:each="attendance : ${attendances}">
+                <td><h5 th:text="${attendance.workingDate}"></h5></td>
+                <td><h5 th:text="${attendance.inTime}"></h5></td>
+                <td><h5 th:text="${attendance.breakTotaltime}"></h5></td>
+                <td><h5 th:text="${attendance.outTime}"></h5></td>
+                <td><h5 th:text="${attendance.totalTime}"></h5></td>
+                <td><h5 th:text="${attendance.workingTime}"></h5></td>
+            </tr>
+        </table>
+    </table>
+</body>
+</html>
